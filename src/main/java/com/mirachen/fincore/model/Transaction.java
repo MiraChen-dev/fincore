@@ -31,3 +31,4 @@ public abstract class Transaction {
         return((isIncome() ? "[IN]" : "[OUT]") + " " + amount + " " +category+" "+description+" "+date);
     }
 }
+//change
