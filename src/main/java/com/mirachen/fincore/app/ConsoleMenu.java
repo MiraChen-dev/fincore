@@ -10,15 +10,21 @@ public class ConsoleMenu {
     private final BudgetService service;
     private final Scanner scanner = new Scanner(System.in);
 
+    private String accountName;
     public ConsoleMenu(BudgetService service) {
         this.service = service;
     }
 
     public void run() {
+        System.out.println("please enter your account name:");
+        accountName = scanner.nextLine().trim();
+        if (accountName.isEmpty()){
+            accountName = "you-know-who";
+        }
         boolean running = true;
         while (running) {
-            System.out.println("""
-                    Welcome to Fincore! Here is the Menu:
+            System.out.println("Welcome to Fincore! "+ accountName + ", " +"""
+                    Here is the Menu:
                     1.Add income
                     2.Add expense
                     3.List transactions

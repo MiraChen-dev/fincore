@@ -28,7 +28,6 @@ public abstract class Transaction {
 
     @Override
     public String toString(){
-        return((isIncome() ? "[IN]" : "[OUT]") + " " + amount + " " +category+" "+description+" "+date);
+        return((isIncome() ? "[money in]" : "[money out]") + " {amount is: " + getAmount() + "} {category is: " +getCategory()+"} {description of this transaction: "+getDescription()+"} {date of this transaction: "+getDate()+"} {your Id is: "+ getId()+"}");
     }
 }
-//change
